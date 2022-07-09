@@ -1,6 +1,6 @@
-import React from 'react';
-import {Button, IconButton} from '@mui/material';
+import {StyledButton} from './styles';
 import Image from 'next/image';
+import React from 'react';
 
 type Props = {
     onClick: () => void;
@@ -10,15 +10,11 @@ export const RandomButton: React.FC<Props> = (props) => {
     const {onClick} = props;
 
     return (
-        <Button
+        <StyledButton
             variant="contained"
             onClick={onClick}
-            color="primary"
-            sx={{
-                padding: '20px',
-                borderRadius: '50%',
-            }}>
-            <Image width={22} height={22} src={'/icon-dice.svg'}/>
-        </Button>
+            color="primary">
+            <Image width={22} height={22} src='/icon-dice.svg'/>
+        </StyledButton>
     );
 };
