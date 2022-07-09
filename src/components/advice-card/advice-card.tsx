@@ -1,6 +1,7 @@
+import {StyledCard, StyledTitle, StyledContent, StyledButtonContainer} from './styles';
 import {RandomButton} from '../random-button/random-button';
-import {Box, Card, Typography} from '@mui/material';
 import {Advice} from '../../abstraction';
+import {Box} from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 
@@ -14,34 +15,17 @@ export const AdviceCard: React.FC<Props> = (props) => {
     const {id: adviceId, advice} = props.advice;
 
     return (
-        <>
-            <Card
-                elevation={5}
-                sx={{
-                    textAlign: 'center',
-                    padding: '40px 22px 60px 22px',
-                    borderRadius: '16px',
-                    maxWidth: '600px'
-                }}>
-                <Typography
-                    fontFamily="Manrope"
-                    fontWeight="lighter"
-                    color="primary"
-                    fontSize={14}
-                    sx={{
-                        letterSpacing: '6px'
-                    }}>
+        <React.Fragment>
+            <StyledCard elevation={5}>
+                <StyledTitle
+                    color="primary">
                     ADVICE #{adviceId}
-                </Typography>
-                <Typography
-                    fontFamily="Manrope"
-                    fontWeight={800}
-                    fontSize={28}
-                    sx={{
-                        margin: '30px 0 20px 0'
-                    }}>
+                </StyledTitle>
+
+                <StyledContent>
                     "{advice}"
-                </Typography>
+                </StyledContent>
+
                 <Box sx={{
                     display: {
                         sm: 'none'
@@ -52,6 +36,7 @@ export const AdviceCard: React.FC<Props> = (props) => {
                         width={295}
                         height={16}/>
                 </Box>
+
                 <Box sx={{
                     display: {
                         xs: 'none',
@@ -64,15 +49,11 @@ export const AdviceCard: React.FC<Props> = (props) => {
                         height={16}/>
                 </Box>
 
-            </Card>
+            </StyledCard>
 
-            <Box sx={{
-                position: 'relative',
-                top: '-26px',
-                alignSelf: 'center'
-            }}>
+            <StyledButtonContainer>
                 <RandomButton onClick={generateAdvice}/>
-            </Box>
-        </>
+            </StyledButtonContainer>
+        </React.Fragment>
     );
 };
