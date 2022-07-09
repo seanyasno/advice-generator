@@ -38,6 +38,7 @@ export const AdviceCard: React.FC<Props> = (props) => {
                         height={16}/>
                 </Box>
 
+
                 <Box sx={{
                     display: {
                         xs: 'none',
