@@ -14,7 +14,7 @@ export const RandomButton: React.FC<Props> = (props) => {
             variant="contained"
             onClick={onClick}
             color="primary">
-            <Image width={22} height={22} src='/icon-dice.svg'/>
+            <Image alt="dice" width={22} height={22} src="/icon-dice.svg"/>
         </StyledButton>
     );
 };

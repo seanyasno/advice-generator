@@ -23,7 +23,7 @@ export const AdviceCard: React.FC<Props> = (props) => {
                 </StyledTitle>
 
                 <StyledContent>
-                    "{advice}"
+                    &quot;{advice}&quot;
                 </StyledContent>
 
                 <Box sx={{
@@ -33,6 +33,7 @@ export const AdviceCard: React.FC<Props> = (props) => {
                 }}>
                     <Image
                         src="/pattern-divider-mobile.svg"
+                        alt="divider"
                         width={295}
                         height={16}/>
                 </Box>
@@ -45,6 +46,7 @@ export const AdviceCard: React.FC<Props> = (props) => {
                 }}>
                     <Image
                         src="/pattern-divider-desktop.svg"
+                        alt="divider"
                         width={444}
                         height={16}/>
                 </Box>

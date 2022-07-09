@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         refetchOnWindowFocus: false,
     });
 
-    const generateAdvice = useCallback(() => refetch(), []);
+    const generateAdvice = useCallback(() => refetch(), [refetch]);
 
     return (
         <Container sx={{
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
                 <title>Advice Generator</title>
                 <link rel="shortcut icon" href="/icon-dice.svg"/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+                <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap"
                       rel="stylesheet"/>
             </Head>
